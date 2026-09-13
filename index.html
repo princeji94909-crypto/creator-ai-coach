@@ -4,15 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creator AI Coach</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px 20px;
+            background: #f4f6f8;
+        }
+
+        .box {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            background: #222;
+            color: white;
+            font-size: 16px;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="box">
+        <h1>Creator AI Coach</h1>
 
-    <h1>Creator AI Coach</h1>
+        <p>Your creator journey. Your goals. Your pace.</p>
 
-    <p>Your creator journey. Your goals. Your pace.</p>
+        <button onclick="startJourney()">Start Your Journey</button>
 
-    <button>Start Your Journey</button>
+        <p id="message"></p>
+    </div>
 
+    <script>
+        function startJourney() {
+            document.getElementById("message").textContent =
+                "Welcome! Let's understand your creator journey.";
+        }
+    </script>
 </body>
 </html>
