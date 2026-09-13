@@ -93,4 +93,63 @@
         }
     </script>
 </body>
+</html>            margin: 12px 0;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #eeeeee;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Creator AI Coach</h1>
+
+        <p>
+            Your creator journey. Your goals. Your pace.
+        </p>
+
+        <h2>Why do you create?</h2>
+
+        <p>Choose the option that best describes you right now.</p>
+
+        <button onclick="chooseReason('I create for fun')">
+            I create for fun
+        </button>
+
+        <button onclick="chooseReason('I want to grow')">
+            I want to grow
+        </button>
+
+        <button onclick="chooseReason('I am exploring')">
+            I am exploring
+        </button>
+
+        <button onclick="chooseReason('I have a clear goal')">
+            I have a clear goal
+        </button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function chooseReason(reason) {
+            document.getElementById("result").textContent =
+                "You selected: " + reason;
+        }
+    </script>
+</body>
 </html>
