@@ -8,50 +8,88 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 40px 20px;
             background: #f4f6f8;
+            margin: 0;
+            padding: 30px 20px;
         }
 
-        .box {
+        .container {
             max-width: 500px;
             margin: auto;
             background: white;
             padding: 30px;
-            border-radius: 15px;
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.5;
         }
 
         button {
-            padding: 12px 20px;
-            border: none;
-            border-radius: 8px;
-            background: #222;
-            color: white;
+            display: block;
+            width: 100%;
+            margin: 12px 0;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: white;
             font-size: 16px;
+            cursor: pointer;
         }
 
-        #message {
+        button:hover {
+            background: #eeeeee;
+        }
+
+        #result {
             margin-top: 20px;
             font-weight: bold;
+            color: #222;
         }
     </style>
 </head>
 
 <body>
-    <div class="box">
+    <div class="container">
         <h1>Creator AI Coach</h1>
 
-        <p>Your creator journey. Your goals. Your pace.</p>
+        <p>
+            Your creator journey. Your goals. Your pace.
+        </p>
 
-        <button onclick="startJourney()">Start Your Journey</button>
+        <h2>Why do you create?</h2>
 
-        <p id="message"></p>
+        <p>Choose the option that best describes you right now.</p>
+
+        <button onclick="chooseReason('I create for fun')">
+            I create for fun
+        </button>
+
+        <button onclick="chooseReason('I want to grow')">
+            I want to grow
+        </button>
+
+        <button onclick="chooseReason('I am exploring')">
+            I am exploring
+        </button>
+
+        <button onclick="chooseReason('I have a clear goal')">
+            I have a clear goal
+        </button>
+
+        <p id="result"></p>
     </div>
 
     <script>
-        function startJourney() {
-            document.getElementById("message").textContent =
-                "Welcome! Let's understand your creator journey.";
+        function chooseReason(reason) {
+            document.getElementById("result").textContent =
+                "You selected: " + reason;
         }
     </script>
 </body>
